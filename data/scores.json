@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "updated_at": "15 May 2026  17:03:14 IST",
+    "cycle": 1
+  },
+  "macro": {
+    "vix": 18.79,
+    "vix_score": 0.6484,
+    "usdinr": 95.82,
+    "fx_score": 0.0
+  },
+  "Nifty": {
+    "price": 23643.5,
+    "high_52w": 26373.2,
+    "low_52w": 22182.55,
+    "pe": null,
+    "vix": 18.79,
+    "usdinr": 95.82,
+    "price_score": 0.3486,
+    "pe_score": null,
+    "vix_score": 0.6484,
+    "fx_score": 0.0,
+    "master_score": 0.3347,
+    "signal": "BUY",
+    "rsi": 44.84,
+    "strong_buy": false
+  },
+  "Infosys": {
+    "price": 1119.0,
+    "high_52w": 1728.0,
+    "low_52w": 1089.0,
+    "pe": 14.62,
+    "vix": 18.79,
+    "usdinr": 95.82,
+    "price_score": 0.0469,
+    "pe_score": null,
+    "vix_score": 0.6484,
+    "fx_score": 0.0,
+    "master_score": 0.2054,
+    "signal": "BUY",
+    "rsi": 37.85,
+    "strong_buy": false
+  },
+  "Reliance": {
+    "price": 1336.4,
+    "high_52w": 1611.8,
+    "low_52w": 1290.0,
+    "pe": 22.4,
+    "vix": 18.79,
+    "usdinr": 95.82,
+    "price_score": 0.1442,
+    "pe_score": null,
+    "vix_score": 0.6484,
+    "fx_score": 0.0,
+    "master_score": 0.2471,
+    "signal": "BUY",
+    "rsi": 43.64,
+    "strong_buy": false
+  },
+  "ICICI": {
+    "price": 1244.5,
+    "high_52w": 1500.0,
+    "low_52w": 1187.6,
+    "pe": 16.65,
+    "vix": 18.79,
+    "usdinr": 95.82,
+    "price_score": 0.1821,
+    "pe_score": null,
+    "vix_score": 0.6484,
+    "fx_score": 0.0,
+    "master_score": 0.2633,
+    "signal": "BUY",
+    "rsi": 28.88,
+    "strong_buy": true
+  }
+}
