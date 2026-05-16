@@ -27,7 +27,7 @@ st.set_page_config(
 # ── Constants ──────────────────────────────────────────────────────────────
 GITHUB_RAW_URL = st.secrets.get(
     "GITHUB_RAW_URL",
-    "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/data/scores.json"
+    "https://raw.githubusercontent.com/ish013/quant-india/main/data/scores.json"
 )
 BUY_THRESHOLD  = 0.35
 SELL_THRESHOLD = 0.65
