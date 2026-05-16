@@ -45,8 +45,8 @@ VIX_MIN = 10.0
 VIX_MAX = 35.0
 
 # ── USD/INR range ──────────────────────────────────────────────────────────
-USDINR_MIN = 70.0
-USDINR_MAX = 98.0
+USDINR_MIN = 85.0
+USDINR_MAX = 100.0
 
 # ── Excel output ───────────────────────────────────────────────────────────
 EXCEL_PATH  = "output/QuantAnalyzer.xlsx"
