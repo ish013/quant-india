@@ -1,13 +1,13 @@
 {
   "meta": {
-    "updated_at": "16 May 2026  12:36:50 IST",
-    "cycle": 3
+    "updated_at": "16 May 2026  12:39:02 IST",
+    "cycle": 1
   },
   "macro": {
     "vix": 18.79,
     "vix_score": 0.6484,
     "usdinr": 95.955,
-    "fx_score": 0.073
+    "fx_score": 0.2697
   },
   "Nifty": {
     "price": 23643.5,
@@ -19,8 +19,8 @@
     "price_score": 0.3486,
     "pe_score": null,
     "vix_score": 0.6484,
-    "fx_score": 0.073,
-    "master_score": 0.3555,
+    "fx_score": 0.2697,
+    "master_score": 0.4117,
     "signal": "HOLD",
     "rsi": 44.84,
     "strong_buy": false
@@ -35,8 +35,8 @@
     "price_score": 0.0469,
     "pe_score": null,
     "vix_score": 0.6484,
-    "fx_score": 0.073,
-    "master_score": 0.2262,
+    "fx_score": 0.2697,
+    "master_score": 0.2824,
     "signal": "BUY",
     "rsi": 37.85,
     "strong_buy": false
@@ -51,8 +51,8 @@
     "price_score": 0.1442,
     "pe_score": null,
     "vix_score": 0.6484,
-    "fx_score": 0.073,
-    "master_score": 0.2679,
+    "fx_score": 0.2697,
+    "master_score": 0.3241,
     "signal": "BUY",
     "rsi": 43.64,
     "strong_buy": false
@@ -67,8 +67,8 @@
     "price_score": 0.1821,
     "pe_score": null,
     "vix_score": 0.6484,
-    "fx_score": 0.073,
-    "master_score": 0.2842,
+    "fx_score": 0.2697,
+    "master_score": 0.3404,
     "signal": "BUY",
     "rsi": 28.88,
     "strong_buy": true

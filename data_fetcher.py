@@ -172,30 +172,53 @@ def fetch_vix() -> dict:
 
 
 def fetch_usdinr() -> dict:
-    """
-    Return USD/INR rate and normalized FX score.
-    FX score is INVERTED: strong rupee (lower USDINR) = higher score = bullish.
-    """
     key = "usdinr"
     if _is_fresh(key):
         return _cache[key]
 
     try:
-        ticker = yf.Ticker(cfg.USDINR_SYMBOL)
-        info   = ticker.fast_info
-        rate   = getattr(info, "last_price", None) \
-              or getattr(info, "previous_close", None)
-        rate   = float(rate)
+        rate = None
 
-        # Normalize and INVERT
+        # Try history-based fetch — more accurate than fast_info
+        for symbol in ["INR=X", "USDINR=X"]:
+            try:
+                hist = yf.Ticker(symbol).history(period="5d", interval="1d")
+                if not hist.empty:
+                    val = float(hist["Close"].iloc[-1])
+                    if not hist.empty:                    
+                        val = float(hist["Close"].iloc[-1])
+                        if val>0:
+                            rate = val
+                            break
+            except Exception:
+                continue
+
+        # Try download() as second option
+        if rate is None:
+            try:
+                import pandas as pd
+                df = yf.download("INR=X", period="5d",
+                                 interval="1d", progress=False)
+                if not df.empty:
+                    if isinstance(df.columns, pd.MultiIndex):
+                        df.columns = df.columns.get_level_values(0)
+                    val = float(df["Close"].iloc[-1])
+                    if 75.0 <= val <= 90.0:
+                        rate = val
+                        log.info("USD/INR via download: %.4f", rate)
+            except Exception:
+                pass
+
+        # Safe fallback
+        if rate is None:
+            rate = 84.50
+            log.warning("USD/INR: all methods failed — using fallback %.2f", rate)
+
         mn, mx       = cfg.USDINR_MIN, cfg.USDINR_MAX
         rate_clamped = max(mn, min(mx, rate))
         fx_score     = round(1 - (rate_clamped - mn) / (mx - mn), 4)
 
-        result = {
-            "usdinr":   round(rate, 4),
-            "fx_score": fx_score,
-        }
+        result = {"usdinr": round(rate, 4), "fx_score": fx_score}
         log.info("USD/INR: %.4f → score=%.3f", rate, fx_score)
         return _store(key, result)
 
