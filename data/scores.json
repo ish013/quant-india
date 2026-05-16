@@ -1,12 +1,12 @@
 {
   "meta": {
-    "updated_at": "15 May 2026  17:15:58 IST",
-    "cycle": 1
+    "updated_at": "16 May 2026  12:24:14 IST",
+    "cycle": 9
   },
   "macro": {
     "vix": 18.79,
     "vix_score": 0.6484,
-    "usdinr": 95.82,
+    "usdinr": 95.955,
     "fx_score": 0.0
   },
   "Nifty": {
@@ -15,7 +15,7 @@
     "low_52w": 22182.55,
     "pe": null,
     "vix": 18.79,
-    "usdinr": 95.82,
+    "usdinr": 95.955,
     "price_score": 0.3486,
     "pe_score": null,
     "vix_score": 0.6484,
@@ -31,7 +31,7 @@
     "low_52w": 1089.0,
     "pe": 14.62,
     "vix": 18.79,
-    "usdinr": 95.82,
+    "usdinr": 95.955,
     "price_score": 0.0469,
     "pe_score": null,
     "vix_score": 0.6484,
@@ -45,9 +45,9 @@
     "price": 1336.4,
     "high_52w": 1611.8,
     "low_52w": 1290.0,
-    "pe": 22.4,
+    "pe": 22.37,
     "vix": 18.79,
-    "usdinr": 95.82,
+    "usdinr": 95.955,
     "price_score": 0.1442,
     "pe_score": null,
     "vix_score": 0.6484,
@@ -61,9 +61,9 @@
     "price": 1244.5,
     "high_52w": 1500.0,
     "low_52w": 1187.6,
-    "pe": 16.65,
+    "pe": 16.64,
     "vix": 18.79,
-    "usdinr": 95.82,
+    "usdinr": 95.955,
     "price_score": 0.1821,
     "pe_score": null,
     "vix_score": 0.6484,

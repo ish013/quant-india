@@ -6,6 +6,7 @@ Aesthetic direction: WSJ/Bloomberg terminal meets Swiss grid design.
 Typography: Playfair Display (headlines) + IBM Plex Mono (data)
 """
 
+from datetime import datetime, timezone, timedelta
 import json
 import time
 from datetime import datetime
@@ -809,8 +810,8 @@ def main():
     meta       = data.get("meta", {})
     updated    = meta.get("updated_at", "—")
     cycle      = meta.get("cycle",      "—")
-    now        = datetime.now().strftime("%d %b %Y  %H:%M:%S")
-
+    IST = timezone(timedelta(hours=5, minutes=30))
+    now_local = datetime.now(IST).strftime("%d %b %Y  %H:%M:%S IST"
     # ── Masthead ────────────────────────────────────────────────────────────
     st.markdown(f"""
     <div class="masthead">

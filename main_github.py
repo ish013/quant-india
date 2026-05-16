@@ -6,6 +6,7 @@ Usage:
   python main_github.py --loop    refresh every REFRESH_SEC seconds
 """
 
+from datetime import timezone, timedelta
 import base64
 import json
 import logging
@@ -171,9 +172,11 @@ def run_once():
 
     # Step 4: Build payload + push to GitHub
     log.info("Step 4/4 — Pushing to GitHub...")
+    IST = timezone(timedelta(hours=5, minutes=30))
+
     payload = {
         "meta": {
-            "updated_at": datetime.now().strftime("%d %b %Y  %H:%M:%S IST"),
+          "updated_at": datetime.now(IST).strftime("%d %b %Y  %H:%M:%S IST"),
             "cycle":      _cycle,
         },
         "macro": macro,
