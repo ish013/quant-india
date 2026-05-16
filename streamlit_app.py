@@ -811,7 +811,7 @@ def main():
     updated    = meta.get("updated_at", "—")
     cycle      = meta.get("cycle",      "—")
     IST = timezone(timedelta(hours=5, minutes=30))
-    now_local = datetime.now(IST).strftime("%d %b %Y  %H:%M:%S IST"
+    now_local = datetime.now(IST).strftime("%d %b %Y  %H:%M:%S IST")
     # ── Masthead ────────────────────────────────────────────────────────────
     st.markdown(f"""
     <div class="masthead">
